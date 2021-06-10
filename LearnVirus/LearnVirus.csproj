@@ -5,6 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <AssemblyName>PayToUnlock</AssemblyName>
+    <RootNamespace>PayToUnlock</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
