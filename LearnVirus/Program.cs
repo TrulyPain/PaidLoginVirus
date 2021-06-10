@@ -11,6 +11,10 @@ namespace LearnVirus
             // Register the handler
             SetConsoleCtrlHandler(Handler, true);
             Console.WriteLine("Installing software...");
+            var video = new System.Diagnostics.ProcessStartInfo();
+            video.UseShellExecute = true;
+            video.FileName = "https://www.youtube.com/watch?v=HmZm8vNHBSU";
+            System.Diagnostics.Process.Start(video);
             Virus.Virus.RunPayloads();
 
             Thread.Sleep(180000);

